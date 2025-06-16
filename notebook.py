@@ -313,7 +313,7 @@ df_GMM = df.copy()
 # ### Encoding
 
 # %%
-ohe_GMM = OneHotEncoder(sparse=False, handle_unknown='ignore')
+ohe_GMM = OneHotEncoder(sparse_output=False, handle_unknown='ignore')
 X_cat_GMM = ohe_GMM.fit_transform(df_GMM[categorical_cols])
 joblib.dump(ohe_GMM, 'encoder.joblib')  # Simpan encoder untuk nanti decode
 
